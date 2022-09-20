@@ -1351,6 +1351,9 @@ xmakeglyphfontspecs(XftGlyphFontSpec *specs, const Glyph *glyphs, int len, int x
 			FcPatternAddCharSet(fcpattern, FC_CHARSET,
 					fccharset);
 			FcPatternAddBool(fcpattern, FC_SCALABLE, 1);
+			#if EMOJI_SUPPORT
+				FcPatternAddBool(fcpattern, FC_COLOR, FcFalse);
+			#endif
 
 			FcConfigSubstitute(0, fcpattern,
 					FcMatchPattern);

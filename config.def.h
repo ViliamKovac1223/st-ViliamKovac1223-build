@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
+#define EMOJI_SUPPORT 1
+
 /*
  * appearance
  *
